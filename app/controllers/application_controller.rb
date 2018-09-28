@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/sessions' do
-
+    session[:id] = @user.id
     redirect '/users/home'
   end
 
