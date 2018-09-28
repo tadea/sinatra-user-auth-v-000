@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/users/home' do
-    @user = User.find([:id])
+    @user = User.find_by([:id])
     erb :'/users/home'
   end
 
